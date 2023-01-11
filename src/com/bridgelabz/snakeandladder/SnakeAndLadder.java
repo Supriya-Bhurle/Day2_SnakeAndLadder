@@ -13,7 +13,9 @@ public class SnakeAndLadder {
     public static void main(String[] args) {
         System.out.println("welcome message added");
 
-    int rolldie = rolldie();
+     int rolldie = rolldie();
+     int presentPlayerPosition = 0;
+    while ( presentPlayerPosition <= Ending_Position_Of_Player) {
     int currentPosition = 0;
     int checkPosition= (int)Math.floor(Math.random()*10)%3;
         switch (checkPosition){
@@ -28,5 +30,7 @@ public class SnakeAndLadder {
         default:
             System.out.println("player is not playing " );
         }
+        presentPlayerPosition = presentPlayerPosition + currentPosition;
+        System.out.println("Player " + presentPlayerPosition);
     }
-}
+}}
